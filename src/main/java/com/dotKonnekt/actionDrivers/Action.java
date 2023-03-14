@@ -67,7 +67,7 @@ public class Action extends BaseClass  {
 
 	public static boolean isDisplayed(WebDriver driver, WebElement ele) {
 		boolean flag = false;
-		flag = findElement(driver, ele);
+		flag = findElement(getDriver(), ele);
 		if (flag) {
 			flag = ele.isDisplayed();
 			if (flag) {
@@ -753,6 +753,10 @@ public class Action extends BaseClass  {
 		WebDriverWait wait = new WebDriverWait(driver,timeOut);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	public static void explicitWaitbyTitle(WebDriver driver, String title, Duration  timeOut ) {
+		WebDriverWait wait = new WebDriverWait(driver,timeOut);
+		wait.until(ExpectedConditions.titleIs(title));
+	}
 	 
 	@SuppressWarnings("deprecation")
 	public static void pageLoadTimeOut(WebDriver driver, int timeOut) {
@@ -763,7 +767,7 @@ public class Action extends BaseClass  {
 		String dateName = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) webDriver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png";
+		String destination = "C:\\Users\\garvi\\eclipse-workspace\\RecipePage3\\Screenshots\\" + filename + "_" + dateName + ".png";
 
 		try {
 			FileUtils.copyFile(source, new File(destination));

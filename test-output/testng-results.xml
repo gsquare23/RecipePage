@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-05T17:08:32 IST" name="Default suite" finished-at="2022-12-05T17:08:39 IST" duration-ms="6347">
+  <suite started-at="2023-02-23T23:20:30 IST" name="Default suite" finished-at="2023-02-23T23:20:31 IST" duration-ms="914">
     <groups>
+      <group name="NotLoggedIn">
+        <method signature="MyAccountPageTest.profileIcon_NotLoggedIn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.dotKonnekt.tests.MyAccountPageTest@34f7cfd9]" name="profileIcon_NotLoggedIn" class="com.dotKonnekt.tests.MyAccountPageTest"/>
+      </group> <!-- NotLoggedIn -->
     </groups>
-    <test started-at="2022-12-05T17:08:32 IST" name="Default test" finished-at="2022-12-05T17:08:39 IST" duration-ms="6347">
-      <class name="com.dotKonnekt.tests.RecipePage3">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dotKonnekt.tests.RecipePage3@7690781]" started-at="2022-12-05T17:08:32 IST" name="loadConfig" finished-at="2022-12-05T17:08:32 IST" duration-ms="492" status="PASS">
+    <test started-at="2023-02-23T23:20:30 IST" name="Default test" finished-at="2023-02-23T23:20:31 IST" duration-ms="914">
+      <class name="com.dotKonnekt.tests.MyAccountPageTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.dotKonnekt.tests.MyAccountPageTest@34f7cfd9]" started-at="2023-02-23T23:20:30 IST" name="loadConfig" finished-at="2023-02-23T23:20:30 IST" duration-ms="9" status="FAIL">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+FileInputStream cannot be resolved to a type
+FileInputStream cannot be resolved to a type
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+FileInputStream cannot be resolved to a type
+FileInputStream cannot be resolved to a type
+
+at com.dotKonnekt.base.BaseClass.loadConfig(BaseClass.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:372)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method signature="recipePagesetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.dotKonnekt.tests.RecipePage3@7690781]" started-at="2022-12-05T17:08:33 IST" name="recipePagesetUp" data-provider="getTitle" finished-at="2022-12-05T17:08:38 IST" duration-ms="4869" status="PASS">
+        <test-method signature="profileIcon_NotLoggedIn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.dotKonnekt.tests.MyAccountPageTest@34f7cfd9]" started-at="2023-02-23T23:20:31 IST" name="profileIcon_NotLoggedIn" data-provider="MyAccount" finished-at="2023-02-23T23:20:31 IST" duration-ms="1" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[RecipePage]]>
+                <![CDATA[HomePage]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[RecipePage]]>
+                <![CDATA[dot beauty]]>
               </value>
             </param>
             <param index="2">
@@ -30,47 +68,57 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[https://develop.d1fzm6olmw007.amplifyapp.com/recipe/sugarcane-juice-black-wheat-muffins-cake]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Nithya mahindra]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[SKIN,HAIR,MAKEUP,FRAGRANCE,WELLNESS,STYLE]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[/07 Jan 2021/]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Sugarcane juice black wheat muffins/cake]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[1/2 cup whole wheat flour-1/4 cup black wheat flour (or bajra flour or again whole wheat flour if black wheat is unavailable)-1 & 1/2 tsp baking powder-1/4 cup powdered palm jaggery (powdered organic Sulphur free jaggery)-1 tsp baking soda-1 stick of vanilla pod (take the inside flesh of the vanilla pod) -1/2 cup fresh sugarcane juice-1/4 cup cold-pressed olive oil (can also use cashew paste. To make cashew paste - soak 1/4 cup cashew for 2 hours and puree it,using 2-4,tbsp water and not more) -1/4 cup fresh pumpkin puree (steam yellow pumpkin and puree it )]]>
+                <![CDATA[https://develop.d1fzm6olmw007.amplifyapp.com]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+FileInputStream cannot be resolved to a type
+FileInputStream cannot be resolved to a type
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+FileInputStream cannot be resolved to a type
+FileInputStream cannot be resolved to a type
+
+at com.dotKonnekt.base.BaseClass.loadConfig(BaseClass.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:372)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- recipePagesetUp -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.dotKonnekt.tests.RecipePage3@7690781]" started-at="2022-12-05T17:08:38 IST" name="teardown" finished-at="2022-12-05T17:08:39 IST" duration-ms="169" status="PASS">
+        </test-method> <!-- profileIcon_NotLoggedIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dotKonnekt.tests.MyAccountPageTest@34f7cfd9]" started-at="2023-02-23T23:20:31 IST" name="tearDown" finished-at="2023-02-23T23:20:31 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flush()[pri:0, instance:com.dotKonnekt.tests.RecipePage3@7690781]" started-at="2022-12-05T17:08:39 IST" name="flush" finished-at="2022-12-05T17:08:39 IST" duration-ms="371" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flush()[pri:0, instance:com.dotKonnekt.tests.MyAccountPageTest@34f7cfd9]" started-at="2023-02-23T23:20:31 IST" name="flush" finished-at="2023-02-23T23:20:31 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flush -->
-      </class> <!-- com.dotKonnekt.tests.RecipePage3 -->
+      </class> <!-- com.dotKonnekt.tests.MyAccountPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

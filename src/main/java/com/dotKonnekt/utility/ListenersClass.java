@@ -1,11 +1,9 @@
 package com.dotKonnekt.utility;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -15,7 +13,7 @@ import com.dotKonnekt.base.BaseClass;
 
 
 public class ListenersClass extends ExtentManager implements ITestListener {
-	WebDriver driver;
+	//WebDriver driver;
 	Action action = new Action();
 	 public void onTestStart(ITestResult result) {
 		  test = extent.createTest(result.getName());

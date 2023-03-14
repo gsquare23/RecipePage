@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite configfailurepolicy="continue" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.dotKonnekt.utility.ListenersClass"/>
   </listeners>
-  <test thread-count="5" name="RecipeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <parameter name="Url" value="Recipe"/>
+  <test thread-count="5" name="NotLoggedIn(failed)">
+    <groups>
+      <run>
+        <include name="NotLoggedIn"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.dotKonnekt.tests.RecipePage2">
+      <class name="com.dotKonnekt.tests.RecipePageTest">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyTitle" invocation-numbers="1"/>
+          <include name="RecipePage_NutritionlistVerification" invocation-numbers="1"/>
+          <include name="RecipePage_SearchFucntionalityVerification" invocation-numbers="0 1 2"/>
+          <include name="teardown"/>
           <include name="flush"/>
           <include name="loadConfig"/>
+          <include name="RecipePage_shopTheIngredientsVeriffication" invocation-numbers="0 1 2"/>
+          <include name="RecipePage_recipeImage" invocation-numbers="2"/>
+          <include name="RecipePage_RecipeVideoverification" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.dotKonnekt.tests.RecipePage2 -->
+      </class> <!-- com.dotKonnekt.tests.RecipePageTest -->
+      <class name="com.dotKonnekt.tests.CategoryPageTest">
+        <methods>
+          <include name="BreadCrumbVerification" invocation-numbers="0 1"/>
+          <include name="imageVerification" invocation-numbers="0"/>
+          <include name="CategoryPage_SearchFucntionalityVerification" invocation-numbers="0 1"/>
+          <include name="flush"/>
+          <include name="loadConfig"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.dotKonnekt.tests.CategoryPageTest -->
+      <class name="com.dotKonnekt.tests.ProductPageTest">
+        <methods>
+          <include name="ProductPage_FAQSections" invocation-numbers="0"/>
+          <include name="ProductPage_ReadMorefunctionality" invocation-numbers="0 1 2"/>
+          <include name="ProductPage_ProductDetailVerification" invocation-numbers="0 1 2"/>
+          <include name="ProductPage_SearchFucntionalityVerification" invocation-numbers="0"/>
+          <include name="ProductPage_weFoundOtherProducts" invocation-numbers="0"/>
+          <include name="flush"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.dotKonnekt.tests.ProductPageTest -->
+      <class name="com.dotKonnekt.tests.BlogPageTest">
+        <methods>
+          <include name="BlogPage_bookMarkIconFunctionality" invocation-numbers="0"/>
+          <include name="BlogPage_SearchFucntionalityVerification" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="BlogPage_blogTitleVerification" invocation-numbers="0"/>
+          <include name="BlogPage_recipeImage" invocation-numbers="0"/>
+          <include name="BlogPage_likeIconFunctionality1" invocation-numbers="0"/>
+          <include name="flush"/>
+          <include name="loadConfig"/>
+          <include name="BlogPage_ShareIconFunctionality" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.dotKonnekt.tests.BlogPageTest -->
     </classes>
-  </test> <!-- RecipeTest(failed) -->
+  </test> <!-- NotLoggedIn(failed) -->
 </suite> <!-- Failed suite [Suite] -->
